@@ -2,37 +2,28 @@ package Zadanie_2.Class;
 
 import Zadanie_2.ClassAbstract.GeometricShape;
 
+import java.util.PrimitiveIterator;
+
 public class Circle extends GeometricShape {
-    private double r;
-    private double areaCircle;
 
+    private double circleArea;
 
-    public Circle(double r) {
-        super();
-        this.r = r;
+    public Circle(double rCircle) {
+        super(rCircle);
     }
 
-    public double getAreaCircle() {
-        return areaCircle;
+    public double getArea() {
+        return circleArea;
     }
 
-    public void setAreaCircle(double powCircle) {
-        this.areaCircle = powCircle;
-    }
-
-    public double getR() {
-        return r;
-    }
-
-    public void setR(double r) {
-        this.r = r;
+    public void setCircleArea(double circleArea) {
+        this.circleArea = circleArea;
     }
 
     @Override
     public String toString() {
         return "Circle{" +
-                "r=" + r +
-                ", powCircle=" + areaCircle +
+                "circleArea=" + circleArea +
                 '}';
     }
 }

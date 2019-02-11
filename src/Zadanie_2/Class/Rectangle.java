@@ -4,24 +4,12 @@ import Zadanie_2.ClassAbstract.GeometricShape;
 
 public class Rectangle extends GeometricShape {
 
-    private double areaRectangle;
-
-    public Rectangle(double xPointStart, double yPointStart, double xPointEnd, double yPointEnd) {
-        super(xPointStart, yPointStart, xPointEnd, yPointEnd);
+    public Rectangle(double bokA, double bokB) {
+        super(bokA, bokB);
     }
 
-    public double getAreaRectangle() {
-        return areaRectangle;
+    double retengrleArea(Rectangle rectangle){
+      return rectangle.getBokA()*rectangle.getBokB();
     }
 
-    public void setAreaRectangle(double areaRectangle) {
-        this.areaRectangle = areaRectangle;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "areaRectangle=" + areaRectangle +
-                '}';
-    }
 }

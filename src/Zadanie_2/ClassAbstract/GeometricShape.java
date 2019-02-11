@@ -7,7 +7,11 @@ public abstract class GeometricShape extends Shape2D {
         super(xPointStart, yPointStart, xPointEnd, yPointEnd);
     }
 
-    public GeometricShape() {
-        super();
+    public GeometricShape(double bokA, double bokB) {
+        super(bokA, bokB);
+    }
+
+    public GeometricShape(double rCircle) {
+        super(rCircle);
     }
 }

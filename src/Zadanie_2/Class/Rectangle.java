@@ -10,7 +10,6 @@ public class Rectangle extends GeometricShape {
         super(bokA, bokB);
     }
 
-
     public double getRetengrleArea() {
         return retengrleArea;
     }
@@ -21,6 +20,6 @@ public class Rectangle extends GeometricShape {
 
     @Override
     public String toString() {
-        return "Prostokąt o bokach {" + getBokA() +", " + getBokB() + " ";
+        return "Prostokąt o bokach [" + getBokA() +", " + getBokB() + "] " ;
     }
 }

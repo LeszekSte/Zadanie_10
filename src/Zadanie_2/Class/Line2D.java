@@ -19,9 +19,9 @@ public class Line2D extends Shape2D {
 
     @Override
     public String toString() {
-        return "Line2D{" +
-                "lineLenght=" + lineLenght +
-                '}';
+        return "Line2D{ [" + getxPointStart() + "," + getyPointStart() + "][" +
+                +getxPointEnd() + "," + getyPointStart() + "] ";
+
     }
 }
 

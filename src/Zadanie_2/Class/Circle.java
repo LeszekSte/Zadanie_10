@@ -22,8 +22,6 @@ public class Circle extends GeometricShape {
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "circleArea=" + circleArea +
-                '}';
+        return "Koło{" + "promieniu " + getrCircle() ;
     }
 }

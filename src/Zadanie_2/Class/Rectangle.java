@@ -4,22 +4,37 @@ import Zadanie_2.ClassAbstract.GeometricShape;
 
 public class Rectangle extends GeometricShape {
 
-   private  double retengrleArea;
+
+
+    private double bokA;
+    private double bokB;
 
     public Rectangle(double bokA, double bokB) {
-        super(bokA, bokB);
+        this.bokA = bokA;
+        this.bokB = bokB;
     }
 
-    public double getRetengrleArea() {
-        return retengrleArea;
+    public double getBokA() {
+        return bokA;
     }
 
-    public void setRetengrleArea(double retengrleArea) {
-        this.retengrleArea = retengrleArea;
+    public void setBokA(double bokA) {
+        this.bokA = bokA;
     }
+
+    public double getBokB() {
+        return bokB;
+    }
+
+    public void setBokB(double bokB) {
+        this.bokB = bokB;
+    }
+
+
+
 
     @Override
     public String toString() {
-        return "Prostokąt o bokach [" + getBokA() +", " + getBokB() + "] " ;
+        return "Prostokąt o bokach [" + bokA + ", " + bokB + "] ";
     }
 }

@@ -9,17 +9,29 @@ public class Magazyn {
 
     static Scanner sc = new Scanner(System.in);
 
-    void nowyTowar() {
-        System.out.println("Podaj nazwę i id towaru " + quantity);
+    void nowyTowar(int pozycja) {
+        System.out.println("Podaj nazwę i id towaru " + (quantity+1));
         System.out.println("Nazwa towaru");
         String name = sc.nextLine();
         System.out.println("Podaj Symbol towaru");
         int id = sc.nextInt();
         sc.nextLine();
-        towars[quantity] = new Towar(name, id);
+        inOnMagazine1(name,id, pozycja);
+        //towars[quantity] = new Towar(name, id);
     }
 
-  boolean inOnMagazine(Towar[] towars, int pozycja) {
+  boolean inOnMagazine1(String name, int id , int pozycja){
+        for (int i = 0; i < pozycja; i++) {
+            if ( (towars[pozycja].getName().equals(name) )&& (towars[pozycja].getId()==id)) {
+                System.out.println("W magazynie już jest taki towar " + towars[i].toString());
+                return true;
+            }
+        }
+        quantity++;
+        return false;
+    }
+
+    boolean inOnMagazine(Towar[] towars, int pozycja) {
         for (int i = 0; i < pozycja; i++) {
             if (towars[pozycja].equals(towars[i])) {
                 System.out.println("W magazynie już jest taki towar " + towars[i].toString());

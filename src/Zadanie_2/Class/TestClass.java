@@ -1,28 +1,31 @@
 package Zadanie_2.Class;
 
+
 import Zadanie_2.ClassAbstract.Shape;
 
 public class TestClass {
 
+    private static Object Circle;
+
     public static void main(String[] args) {
-        ShapeCalculator shCalc = new ShapeCalculator();
-        Circle kolo = new Circle(1);
 
-        System.out.println("Pow."+ kolo.toString()+ " wynosi " + shCalc.circleArea(kolo));
-        System.out.println("Pow."+ kolo.toString()+ " wynosi " + shCalc.shapeArea(kolo));
+        ShapeCalculator calc = new ShapeCalculator();
+
+        Shape[] shapes = new Shape[5];
+        shapes[0] = new Line2D(1, 1, 5, 5);
+        shapes[1] = new Circle(15);
+        shapes[2] = new Rectangle(15, 10);
+        shapes[3] = new Cube(10, 10, 10);
+        shapes[4] = new Ball(15);
 
 
-        Line2D line2D = new Line2D(1,1,4,4);
-        System.out.println("Długość "+line2D.toString()+ " wynosi " + shCalc.lineLength(line2D));
+        for (int i = 0; i < shapes.length; i++) {
+           double obl = calc.calculate(shapes[i]);
 
-        Rectangle prostokat = new Rectangle(4,6);
-        System.out.println("Powierzchnia " + prostokat.toString()+ " wynosi " + shCalc.rectangleArea(prostokat));
-        System.out.println("Powierzchnia " + prostokat.toString()+ " wynosi " + shCalc.shapeArea(prostokat));
+            System.out.println(calc.getInfoKształt() + shapes[i] +  " wynosi " +  obl);
+        }
 
-        Cube cube = new Cube(2,3,4);
-        System.out.println("Powierzchnia " + cube.toString()+ " wynosi " + shCalc.volume(cube));
-        System.out.println("Powierzchnia " + cube.toString()+ " wynosi " + shCalc.cubeVolume(cube));
 
+
+        }
     }
-
-}

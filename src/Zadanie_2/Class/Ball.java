@@ -6,8 +6,8 @@ public class Ball extends Shape3D {
 
         private double rBall;
 
-        public Ball(double rCube) {
-                this.rBall = rCube;
+        public Ball(double rBall) {
+                this.rBall = rBall;
         }
 
 
@@ -15,8 +15,8 @@ public class Ball extends Shape3D {
                 return rBall;
         }
 
-        public void setrBall(double rCube) {
-                this.rBall = rCube;
+        public void setrBall(double rBall) {
+                this.rBall = rBall;
         }
 
         @Override

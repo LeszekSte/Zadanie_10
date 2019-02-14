@@ -40,7 +40,7 @@ public class Cube extends Shape3D {
 
     @Override
     public String toString() {
-        return "Cube{" +
+        return "Sześcian o długosciach kw=rawędzi{" +
                 "sideA=" + sideA +
                 ", sideB=" + sideB +
                 ", sideC=" + sideC +

@@ -2,26 +2,29 @@ package Zadanie_2.Class;
 
 import Zadanie_2.ClassAbstract.GeometricShape;
 
-import java.util.PrimitiveIterator;
+
 
 public class Circle extends GeometricShape {
 
-    private double circleArea;
-
     public Circle(double rCircle) {
-        super(rCircle);
+        this.rCircle = rCircle;
     }
 
-    public double getArea() {
-        return circleArea;
+    private double rCircle;
+
+
+    public double getrCircle() {
+        return rCircle;
     }
 
-    public void setCircleArea(double circleArea) {
-        this.circleArea = circleArea;
+    public void setrCircle(double rCircle) {
+        this.rCircle = rCircle;
     }
 
     @Override
     public String toString() {
-        return "Koło " + "promieniu [" + getrCircle() + "] " ;
+        return "Koło o promieniu [" + rCircle + "] " ;
     }
+
+
 }
